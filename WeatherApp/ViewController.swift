@@ -57,7 +57,7 @@ extension ViewController: CLLocationManagerDelegate {
 
         let lat = coord.latitude as Double
         let lon = coord.longitude as Double
-
+        locationManager?.stopUpdatingLocation()
         if (lat != oldCoords.0 && lon != oldCoords.1) {
             setViewDataFromCoordinates(coord.latitude as Double, lon: coord.longitude as Double)
             oldCoords = (lat, lon)
