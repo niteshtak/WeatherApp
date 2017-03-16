@@ -13,7 +13,7 @@ class WeatherForecastFetcher: Any {
     func fetchForCoordinatesWithLatitude(_ latitude: Double, longitude: Double) -> (String, [HourWeatherData])? {
         let timestamp = Int(Date().timeIntervalSince1970) - 10800
 
-        if let json = getJSON("https://api.forecast.io/forecast/c015eee211fa47127a008cbe077a0f17/\(latitude),\(longitude),\(timestamp)?units=si") {
+        if let json = getJSON("https://api.forecast.io/forecast/\(Constants.APIKey)/\(latitude),\(longitude),\(timestamp)?units=si") {
             let asDictionary = parseJSON(json)
             let weatherDescription = getWeatherDescription(asDictionary)
             let hourlyWeatherData = getHourlyWeatherData(asDictionary)

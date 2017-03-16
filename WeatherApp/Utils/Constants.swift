@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+public struct Constants {
+
+    public static let APIKey = "c015eee211fa47127a008cbe077a0f17"
+    public static let APIUrlPrefix = "https://api.forecast.io/forecast/"
+}
