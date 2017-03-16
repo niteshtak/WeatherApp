@@ -25,7 +25,6 @@ class WeatherTableVC: UITableViewController {
         data = toSetWith
         let table = self.view as! UITableView
         table.reloadData()
-        //table.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI * 0.5));
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

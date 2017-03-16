@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ForecastFetcher: Any {
+class WeatherForecastFetcher: Any {
 
     func fetchForCoordinatesWithLatitude(_ latitude: Double, longitude: Double) -> (String, [HourWeatherData])? {
         let timestamp = Int(Date().timeIntervalSince1970) - 10800
